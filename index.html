@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#08070d">
+ <meta name="description" content="A permanent elapsed-time memorial since a meaningful personal milestone.">
+ <title>A First I’ll Always Remember</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <main class="shell">
+ <header class="hero">
+ <div class="brand">
+ <span class="brand-mark" aria-hidden="true">∞</span>
+ <span>ONE MOMENT / EVERY SECOND COUNTS</span>
+ </div>
+
+ <p class="eyebrow">Permanent elapsed-time memorial</p>
+ <h1>A First I’ll Always Remember</h1>
+ <p class="lead">A living time capsule connected to one fixed, meaningful moment.</p>
+
+ <div class="start-card">
+ <span class="label">Permanent reference</span>
+ <strong>29 OCTOBER 2026</strong>
+ <span>04:59:00 A.M. · BANGLADESH STANDARD TIME</span>
+ <code>2026-10-28T22:59:00.000Z</code>
+ </div>
+ </header>
+
+ <section class="time-panel" aria-labelledby="elapsed-heading">
+ <div class="section-heading">
+ <div>
+ <p class="eyebrow">The counter is already running</p>
+ <h2 id="elapsed-heading">Elapsed time</h2>
+ </div>
+ <span id="runtime-badge" class="badge">Initialising</span>
+ </div>
+
+ <div class="primary-clock" aria-live="polite">
+ <span id="calendar-elapsed">00 : 00 : 00 : 00 : 00 : 00</span>
+ <small>YEARS : MONTHS : DAYS : HOURS : MINUTES : SECONDS</small>
+ </div>
+
+ <div class="grid">
+ <article class="metric">
+ <span class="metric-label">Total days</span>
+ <strong id="total-days">0 : 00 : 00 : 00</strong>
+ <small>DAYS : HOURS : MINUTES : SECONDS</small>
+ </article>
+
+ <article class="metric">
+ <span class="metric-label">Total hours</span>
+ <strong id="total-hours">0 : 00 : 00</strong>
+ <small>HOURS : MINUTES : SECONDS</small>
+ </article>
+
+ <article class="metric">
+ <span class="metric-label">Total minutes</span>
+ <strong id="total-minutes">0 : 00 : 000000000</strong>
+ <small>MINUTES : SECONDS : NANOSECONDS</small>
+ </article>
+
+ <article class="metric">
+ <span class="metric-label">Total seconds</span>
+ <strong id="total-seconds-ns">0 : 000000000</strong>
+ <small>SECONDS : NANOSECONDS</small>
+ </article>
+ </div>
+
+ <div class="full-number">
+ <span class="metric-label">Complete elapsed seconds</span>
+ <output id="full-seconds">0</output>
+ <button class="copy-button" data-copy="full-seconds" type="button">Copy</button>
+ </div>
+ </section>
+
+ <section class="status-panel" aria-labelledby="status-heading">
+ <div>
+ <p class="eyebrow">Time integrity</p>
+ <h2 id="status-heading">Synchronization status</h2>
+ </div>
+ <div class="status-line">
+ <span id="status-dot" class="status-dot"></span>
+ <strong id="sync-status">Synchronization in progress.</strong>
+ </div>
+ <dl class="status-details">
+ <div><dt>Current Bangladesh time</dt><dd id="bd-time">—</dd></div>
+ <div><dt>Time source</dt><dd id="source-name">—</dd></div>
+ <div><dt>Last trusted sync</dt><dd id="last-sync">—</dd></div>
+ <div><dt>Estimated uncertainty</dt><dd id="uncertainty">—</dd></div>
+ </dl>
+ <p class="notice" id="precision-note">
+ Subsecond digits are an estimate based on the accepted time sample and the browser's monotonic clock.
+ They are not proof of nanosecond measurement accuracy.
+ </p>
+ </section>
+
+ <section class="milestone" aria-labelledby="milestone-heading">
+ <p class="eyebrow">Personal milestone</p>
+ <h2 id="milestone-heading">The Morning I Successfully Uploaded My First Long Video to Facebook</h2>
+
+ <div class="story">
+ <p>At <em>4:59 a.m. on 29 October 2026, Bangladesh Standard Time</em>, I marked a personal milestone that I will always remember.</p>
+
+ <p>For the <em>first time in my life</em>, I successfully uploaded a <em>34-minute-and-10-second</em> video to Facebook. The video finished processing and was published successfully, exactly as I had hoped.</p>
+
+ <p>This was more than just a video upload. It was a meaningful personal achievement, a moment of patience rewarded, and a memory I wanted to preserve.</p>
+
+ <p>I want this moment to remain a beautiful part of my life's story—a reminder that even a seemingly small achievement can hold extraordinary meaning. May I always remember this morning as a moment when my hopes became reality, and my journey continued to unfold in its own time.</p>
+ </div>
+
+ <p class="ownership-note">
+ This is a personal record supplied by the website owner. It does not claim verification by Facebook.
+ </p>
+ </section>
+
+ <section class="details">
+ <details>
+ <summary>About precision and offline operation</summary>
+ <p>
+ The permanent starting instant is stored in the source code, not in browser storage.
+ The counter reconstructs elapsed time from that instant whenever the page opens.
+ During temporary network loss, it estimates time using the last accepted synchronization and a monotonic clock.
+ If no trusted estimate exists, it clearly identifies the device clock as a fallback.
+ </p>
+ </details>
+ </section>
+
+ <footer>
+ <span>Fixed reference: Asia/Dhaka</span>
+ <button class="copy-button" data-copy="start-iso" type="button">Copy timestamp</button>
+ <input id="start-iso" value="2026-10-28T22:59:00.000Z" readonly aria-label="Permanent UTC timestamp">
+ </footer>
+ </main>
+
+ <script src="script.js"></script>
+</body>
+</html>
